@@ -1,0 +1,446 @@
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: auto; min-height: 100%;"><head><style type="text/css">
+            .ui-datatable .ui-datatable-header {
+                text-align: right !important;
+            }
+        </style><link type="text/css" rel="stylesheet" href="/javax.faces.resource/theme.css.xhtml?ln=primefaces-admin"><link type="text/css" rel="stylesheet" href="/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=8.0"><script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=8.0"></script><link type="text/css" rel="stylesheet" href="/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=8.0"><script type="text/javascript" src="/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/touch/touchswipe.js.xhtml?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/bootstrap.min.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/admin-lte.min.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/admintemplate.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/slimscroll.min.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/slideout.min.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/adminslide.js.xhtml?ln=js"></script><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='pt_BR';}</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+        <title>manejo.app - Eficiência no MIP e MID</title></head><body class="skin-blue sidebar-mini" style="height: auto; min-height: 100%;"><div id="j_idt7"></div><div id="adminStatusDialog" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" role="dialog" aria-describedby="adminStatusDialog_content" aria-hidden="true" aria-modal="true" aria-labelledby="adminStatusDialog_title" aria-live="off" style="width: auto; height: auto; visibility: visible; left: 539.7px; top: 306.95px; z-index: 1001; display: none;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="adminStatusDialog_title" class="ui-dialog-title"></span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="adminStatusDialog_content" style="height: auto;"><img id="j_idt8" src="/javax.faces.resource/ajaxloadingbar.gif.xhtml?ln=images" alt=""></div></div>
+<form id="j_idt9" name="j_idt9" method="post" action="/base/farmer/index.xhtml" enctype="application/x-www-form-urlencoded" style="display:none;">
+<input type="hidden" name="j_idt9" value="j_idt9">
+<input id="btn-restore-layout" type="submit" name="btn-restore-layout" value="" style="visibility:hidden;" onclick="restoreLayoutDefaults();"><button id="updateSkinBlue" name="updateSkinBlue" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinBlue&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinBlue&quot;,u:&quot;updateSkinBlue&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-blue');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinBlack" name="updateSkinBlack" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinBlack&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinBlack&quot;,u:&quot;updateSkinBlack&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-black');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinPurple" name="updateSkinPurple" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinPurple&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinPurple&quot;,u:&quot;updateSkinPurple&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-purple');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinGreen" name="updateSkinGreen" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinGreen&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinGreen&quot;,u:&quot;updateSkinGreen&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-green');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinRed" name="updateSkinRed" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinRed&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinRed&quot;,u:&quot;updateSkinRed&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-red');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinYellow" name="updateSkinYellow" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinYellow&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinYellow&quot;,u:&quot;updateSkinYellow&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-yellow');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinTeal" name="updateSkinTeal" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinTeal&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinTeal&quot;,u:&quot;updateSkinTeal&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-teal');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinBlueLight" name="updateSkinBlueLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinBlueLight&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinBlueLight&quot;,u:&quot;updateSkinBlueLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-blue-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinBlackLight" name="updateSkinBlackLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinBlackLight&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinBlackLight&quot;,u:&quot;updateSkinBlackLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-black-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinPurpleLight" name="updateSkinPurpleLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinPurpleLight&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinPurpleLight&quot;,u:&quot;updateSkinPurpleLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-purple-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinRedLight" name="updateSkinRedLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinRedLight&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinRedLight&quot;,u:&quot;updateSkinRedLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-red-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinGreenLight" name="updateSkinGreenLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinGreenLight&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinGreenLight&quot;,u:&quot;updateSkinGreenLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-green-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinYellowLight" name="updateSkinYellowLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinYellowLight&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinYellowLight&quot;,u:&quot;updateSkinYellowLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-yellow-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinTealLight" name="updateSkinTealLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinTealLight&quot;,f:&quot;j_idt9&quot;,p:&quot;updateSkinTealLight&quot;,u:&quot;updateSkinTealLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-teal-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-6616719070626236327:7301211572345660751" autocomplete="off">
+</form>
+
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+        <div id="loader" class="load-bar" style="display: none">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <header class="main-header">
+        <a href="/" class="logo">
+            <span class="logo-mini"><img id="j_idt12" src="/javax.faces.resource/images/manejo-logo.png.xhtml?pfdrid_c=true" alt="" width="32px" height="42px">
+            </span>
+            <span class="logo-lg">
+        manejo.app
+    
+            </span>
+            <span class="logo-lg">
+            </span>
+        </a>
+        <nav class="navbar navbar-static-top">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only"></span>
+            </a>
+            <div class="navbar-custom-menu">
+
+    <ul class="nav navbar-nav">
+
+        <li style="margin-top: 12px">
+<form id="j_idt18" name="j_idt18" method="post" action="/base/farmer/index.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt18" value="j_idt18">
+<div id="j_idt18:j_idt19" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" aria-owns="j_idt18:j_idt19_items" style="color: white; min-width: 117.2px;" role="combobox" aria-haspopup="listbox" aria-expanded="false"><div class="ui-helper-hidden-accessible"><input id="j_idt18:j_idt19_focus" name="j_idt18:j_idt19_focus" type="text" autocomplete="off" aria-required="true" aria-autocomplete="list" aria-activedescendant="j_idt18:j_idt19_2" aria-describedby="j_idt18:j_idt19_2" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt18:j_idt19_input" name="j_idt18:j_idt19_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt18:j_idt19&quot;,e:&quot;change&quot;,f:&quot;j_idt18&quot;,p:&quot;j_idt18:j_idt19&quot;,onsu:function(data,status,xhr){window.location.reload();;}});"><option value="1" data-escape="true">Safra 2019/2020</option><option value="2" data-escape="true">Safra 2020/2021</option><option value="3" selected="selected" data-escape="true">Safra 2021/2022</option></select></div><label id="j_idt18:j_idt19_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">Safra 2021/2022</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="-6616719070626236327:7301211572345660751" autocomplete="off">
+</form>
+        </li>
+
+        <li class="dropdown user user-menu"><a href="/j_spring_security_logout" class="ui-link ui-widget" title="Logoff">
+                <i class="fa fa-user-circle fa-2x"></i>
+                Anna Doe
+                <i class="fa fa-sign-out fa-2x"></i></a>
+        </li>
+    </ul>
+            </div>
+
+            <div class="center-navbar">
+            </div>
+            <div class="mobile-header">
+                <h4></h4>
+            </div>
+        </nav>
+        </header>
+        <!-- side menu -->
+        <aside id="sidebar" class="main-sidebar slideout-menu" style="display: block;">
+            <div>
+                    <div class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Buscar itens de menu..." autocomplete="off" onclick="this.value = '';searchLeftMenu('')" onkeyup="searchLeftMenu(this.value)" onblur="this.value = '';hideMenuResults()">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                                </button>
+                            </span>
+
+                        </div>
+
+                        <ul id="menu-search" class="nav navbar-nav" role="menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"></a>
+
+                                <ul class="dropdown-menu" role="menu">
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                <section class="sidebar" style="height: auto;">
+        <ul class="sidebar-menu tree" data-widget="tree">
+            <li><a href="/index.xhtml" class="ui-link ui-widget" onclick="clearBreadCrumbs()">
+                    <i class="fa fw fa-pie-chart"></i>
+                    <span>Painel de Controle</span></a>
+            </li>
+                <li class="header">
+                    Opções
+                </li>
+
+                <li class="treeview active">
+                    <a href="#">
+                        <i class="fa fw fa-group"></i>
+                        <span>Unidade de Referência</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/base/field/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Unidades de Referência">
+                                <i class="fa fw fa-group"></i>
+                                <span>Gerenciamento das URs</span></a>
+                        </li>
+
+                        <li><a href="/base/supervisor/index.xhtml" class="ui-link ui-widget" title="Gerenciamento dos Instrutores">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Instrutor</span></a>
+                        </li>                        
+
+                        <li class="active"><a href="/base/farmer/index.xhtml" class="ui-link ui-widget" title="Gerenciamento dos Produtores">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Produtor</span></a>
+                        </li>
+
+                        <li><a href="/base/region/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Regiões">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Região</span></a>
+                        </li>
+
+                        <li><a href="/base/macro-region/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Macrorregiões">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Macrorregião</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-book"></i>
+                        <span>Safra</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/survey/survey/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das URs na Safra">
+                                <i class="fa fw fa-book"></i>
+                                <span>Gerenciamento da Safra</span></a>
+                        </li>
+
+                        <li><a href="/survey/harvest/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Safras">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Safra</span></a>
+                        </li>                        
+
+                        <li><a href="/survey/cultivar/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Cultivares">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Cultivar</span></a>
+                        </li>
+
+                    </ul>
+                </li>            
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-bug"></i>
+                        <span>MIP</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+
+                    <ul class="treeview-menu"> 
+                        <li><a href="/mip/pest/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Pragas">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Pragas</span></a>
+                        </li>
+
+                        <li><a href="/mip/pest-disease/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Doenças das Pragas">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Doenças das Pragas</span></a>
+                        </li>
+
+                        <li><a href="/mip/pest-natural-predator/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Inimigos Naturais de Pragas">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Inimigos Naturais</span></a>
+                        </li>
+                    </ul>
+                </li>            
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-leaf"></i>
+                        <span>MID</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/mid/blade-reading-entity/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Entidades">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Entidades</span></a>
+                        </li>  
+
+
+                        <li><a href="/mid/blade-reading-person/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Profissionais para Leitura">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Profissionais</span></a>
+                        </li>  
+
+                    </ul>
+                </li>            
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-yelp"></i>
+                        <span>Pulverização</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/pulverisation/target/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Alvo Principal ou Função">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Alvos/Funções</span></a>
+                        </li>
+
+                        <li><a href="/pulverisation/product/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Produtos">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Produtos</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-user-secret"></i>
+                        <span>Usuários</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/security/mip-user/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Usuários do Sistema">
+                                <i class="fa fw fa-user-secret"></i>
+                                <span>Gerenciamento de Usuários</span></a>
+                        </li>  
+                    </ul>
+                </li>
+
+            <li><a href="/experimental/index.xhtml" class="ui-link ui-widget" title="Permite o envio de fotos de pragas, doenças e inimigos naturais">
+                    <i class="fa fw fa-arrow-up"></i>
+                    <span>Envio de Fotos</span></a>
+            </li>
+
+        </ul>
+                </section>
+            </div>
+        </aside>
+        <!-- content --><div id="content" class="content-wrapper" style="min-height: 568.4px; transform: initial;">
+            <section class="content-header">
+                <h1>Gerenciamento de Produtores
+                    <small>
+        <!--Criar, alterar, listar e excluir produtores--></small>
+                </h1>
+                    <ol class="breadcrumb" style="overflow: hidden;">
+                        <li style="position: relative;">
+<form id="j_idt110" name="j_idt110" method="post" action="/base/farmer/index.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt110" value="j_idt110">
+<a id="link-home" href="#" class="ui-commandlink ui-widget ripplelink" onclick="PrimeFaces.ab({s:&quot;link-home&quot;,f:&quot;j_idt110&quot;,p:&quot;link-home&quot;,u:&quot;@none&quot;});return false;">
+                                    <i class="fa fa-home"></i>Inicio</a><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="-6616719070626236327:7301211572345660751" autocomplete="off">
+</form>
+                        </li>
+                            <li class="active">
+                                    Gerenciamento de Produtores
+                                
+                            </li>
+                    </ol>
+            </section>
+            <section class="content">
+                    <div class="row">
+                        <div class="col-sm-12"><div id="messages" class="ui-messages ui-widget" aria-live="polite"></div>
+                                <!-- we need two messages because info-messages are automatically hidden via javascript  --><div id="info-messages" class="ui-messages ui-widget" aria-live="polite" style="display: none;"></div> <!-- exception messages with type tooltip -->
+                        </div>
+                    </div>
+<form id="j_idt128" name="j_idt128" method="post" action="/base/farmer/index.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt128" value="j_idt128">
+
+
+
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <div id="main-buttons" class="hidden-sm hidden-xs"><button id="j_idt128:j_idt130" name="j_idt128:j_idt130" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left btn-primary" onclick="PrimeFaces.ab({s:&quot;j_idt128:j_idt130&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-plus"></span><span class="ui-button-text ui-c">Novo Produtor</span></button><img id="j_idt128:j_idt131" width="5" alt="" src="/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&amp;v=8.0">
+                    </div><div id="j_idt128:j_idt133" class="ui-splitbutton ui-buttonset ui-widget hidden-md hidden-lg btn-primary" aria-haspopup="true" aria-controls="j_idt128:j_idt133_menu" aria-expanded="false"><button id="j_idt128:j_idt133_button" name="j_idt128:j_idt133_button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="PrimeFaces.ab({s:&quot;j_idt128:j_idt133&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-plus"></span><span class="ui-button-text ui-c">Novo Produtor</span></button></div><hr id="j_idt128:j_idt134" class="ui-separator ui-state-default ui-corner-all"><div id="j_idt128:mainTable" class="ui-datatable ui-widget ui-datatable-reflow"><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="j_idt128:mainTable_head"><tr role="row"><th id="j_idt128:mainTable:j_idt135" class="ui-state-default ui-filter-column" role="columnheader" aria-label="Nome" scope="col"><span class="ui-column-title">Nome</span><label id="j_idt128:mainTable:j_idt135:filter_label" for="j_idt128:mainTable:j_idt135:filter" class="ui-helper-hidden">Filter by Nome</label><input id="j_idt128:mainTable:j_idt135:filter" name="j_idt128:mainTable:j_idt135:filter" class="ui-column-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-focus" value="" autocomplete="off" aria-labelledby="j_idt128:mainTable:j_idt135:filter_label" role="textbox" aria-disabled="false" aria-readonly="false"></th><th id="j_idt128:mainTable:j_idt137" class="ui-state-default ui-filter-column" role="columnheader" aria-label="email" scope="col"><span class="ui-column-title">email</span><label id="j_idt128:mainTable:j_idt137:filter_label" for="j_idt128:mainTable:j_idt137:filter" class="ui-helper-hidden">Filter by email</label><input id="j_idt128:mainTable:j_idt137:filter" name="j_idt128:mainTable:j_idt137:filter" class="ui-column-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" value="" autocomplete="off" aria-labelledby="j_idt128:mainTable:j_idt137:filter_label" role="textbox" aria-disabled="false" aria-readonly="false"></th><th id="j_idt128:mainTable:j_idt139" class="ui-state-default ui-filter-column" role="columnheader" aria-label="Responsável Lançamento" scope="col"><span class="ui-column-title">Responsável Lançamento</span><label id="j_idt128:mainTable:j_idt139:filter_label" for="j_idt128:mainTable:j_idt139:filter" class="ui-helper-hidden">Filter by Responsável Lançamento</label><input id="j_idt128:mainTable:j_idt139:filter" name="j_idt128:mainTable:j_idt139:filter" class="ui-column-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" value="" autocomplete="off" aria-labelledby="j_idt128:mainTable:j_idt139:filter_label" role="textbox" aria-disabled="false" aria-readonly="false"></th><th id="j_idt128:mainTable:j_idt142" class="ui-state-default ui-filter-column" role="columnheader" aria-label="Última Alteração" scope="col"><span class="ui-column-title">Última Alteração</span><label id="j_idt128:mainTable:j_idt142:filter_label" for="j_idt128:mainTable:j_idt142:filter" class="ui-helper-hidden">Filter by Última Alteração</label><input id="j_idt128:mainTable:j_idt142:filter" name="j_idt128:mainTable:j_idt142:filter" class="ui-column-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" value="" autocomplete="off" aria-labelledby="j_idt128:mainTable:j_idt142:filter_label" role="textbox" aria-disabled="false" aria-readonly="false"></th><th id="j_idt128:mainTable:j_idt145" class="ui-state-default" role="columnheader" aria-label="Ações" scope="col" style="width:100px"><span class="ui-column-title">Ações</span></th></tr></thead><tbody id="j_idt128:mainTable_data" class="ui-datatable-data ui-widget-content"><tr data-ri="0" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell"><span class="ui-column-title">Nome</span>Luciana Silva</td><td role="gridcell"><span class="ui-column-title">email</span>lucianasilva2@gmail.com</td><td role="gridcell"><span class="ui-column-title">Responsável Lançamento</span>Anna Doe</td><td role="gridcell"><span class="ui-column-title">Última Alteração</span>05/07/2022</td><td role="gridcell"><span class="ui-column-title">Ações</span><button id="j_idt128:mainTable:0:j_idt146" name="j_idt128:mainTable:0:j_idt146" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only btn-warning" onclick="PrimeFaces.addSubmitParam('j_idt128',{'faces-redirect':'true','farmerId':'647'});" type="submit" role="button" aria-disabled="false" aria-describedby="j_idt128:mainTable:0:j_idt149"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-pencil"></span><span class="ui-button-text ui-c">ui-button</span></button><button id="j_idt128:mainTable:0:j_idt150" name="j_idt128:mainTable:0:j_idt150" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only btn-danger" data-pfconfirmcommand="PrimeFaces.bcn(this,event,[function(event){PrimeFaces.ab({s:&quot;j_idt128:mainTable:0:j_idt150&quot;,f:&quot;j_idt128&quot;,u:&quot;j_idt128&quot;});return false;}]);" onclick="PrimeFaces.confirm({source:&quot;j_idt128:mainTable:0:j_idt150&quot;,escape:true,header:&quot;Confirma Exclusão?&quot;,message:&quot;Tem certeza que deseja excluir o produtor 'Luciana Silva'? Essa ação NÃO pode ser desfeita.&quot;,icon:&quot;null&quot;,beforeShow:&quot;&quot;});return false;" type="submit" role="button" aria-disabled="false" aria-describedby="j_idt128:mainTable:0:j_idt151"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-trash"></span><span class="ui-button-text ui-c">ui-button</span></button></td></tr></tbody></table></div><div id="j_idt128:mainTable_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header" role="navigation" aria-label="Pagination"><a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page" tabindex="-1"><span class="ui-icon ui-icon-seek-first">F</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page" tabindex="-1"><span class="ui-icon ui-icon-seek-prev">P</span></a><span class="ui-paginator-pages"><a class="ui-paginator-page ui-state-default ui-corner-all ui-state-active" aria-label="Page 1" tabindex="0" href="#">1</a></span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all ui-state-disabled" aria-label="Next Page" tabindex="-1"><span class="ui-icon ui-icon-seek-next">N</span></a><a href="#" class="ui-paginator-last ui-state-default ui-corner-all ui-state-disabled" aria-label="Last Page" tabindex="-1"><span class="ui-icon ui-icon-seek-end">E</span></a><label id="j_idt128:mainTable:j_id2_rppLabel" for="j_idt128:mainTable:j_id2" class="ui-paginator-rpp-label ui-helper-hidden">Rows Per Page</label><select id="j_idt128:mainTable:j_id2" name="j_idt128:mainTable_rppDD" aria-labelledby="j_idt128:mainTable:j_id2_rppLabel" class="ui-paginator-rpp-options ui-widget ui-state-default ui-corner-left" autocomplete="off"><option value="5" selected="selected">5</option><option value="10">10</option><option value="15">15</option><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="500">500</option></select></div><div class="ui-datatable-footer ui-widget-header ui-corner-bottom">
+                            6 Produtores foram encontrados.
+                        </div></div>                
+
+                </div>
+            </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:3" value="-6616719070626236327:7301211572345660751" autocomplete="off">
+</form>
+            </section></div>
+
+        <footer class="main-footer">
+        <div class="row hidden-xs hidden-sm">
+            <div class="col-md-6">
+                <span>
+                    manejo.app - Copyright (C) 2018-2020. Logo by Patrickss / Freepik
+                </span>
+            </div>
+            <div class="col-md-4 hidden-md">
+                <div>
+                    <a href="http://www.utfpr.edu.br" target="_blank" style="margin-right: 10px"><img id="j_idt160" src="/javax.faces.resource/images/utfpr-logo.png.xhtml?pfdrid_c=true" alt="" width="60px" height="23px">
+                    </a>
+                    <a href="http://www.emater.pr.gov.br" target="_blank" style="margin-right: 10px"><img id="j_idt162" src="/javax.faces.resource/images/idr-logo.jpg.xhtml?pfdrid_c=true" alt="" width="85px" height="23px" style="margin-right: 10px">
+                    </a>
+                    <a href="http://www.sistemafaep.org.br" target="_blank" style="margin-right: 10px"><img id="j_idt164" src="/javax.faces.resource/images/senar-logo.png.xhtml?pfdrid_c=true" alt="" width="70px" height="23px">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="pull-right hidden-xs" style="color: gray">
+                    <i>DEV</i>
+                </div>
+            </div>
+        </div>
+        </footer>
+        <div id="scrollTop" class="ripplelink scroll-top" onclick="window.scrollTo(0, 0)">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        if (isMobile()) {
+            window.onscroll = activateScrollToTop;
+        }
+    </script>
+            <script type="text/javascript">
+                /*<![CDATA[*/
+
+                if (false) {
+                    ripple();
+                } else if (isMobile()) {
+                    ripple();
+                }
+
+                function ripple() {
+                    var rippleElements = '.ripplelink,button.ui-button:not([class*=ui-picklist]):not([class*=ui-orderlist]),li.ui-selectlistbox-item,li.ui-multiselectlistbox-item,.ui-selectonemenu-label,.ui-selectcheckboxmenu,.ui-autocomplete-dropdown, .ui-autocomplete-item, .ui-splitbutton-menubutton, .ui-splitbutton button.ui-button,.input-group, .ui-selectbooleanbutton, div.ui-button,.ui-chkbox-icon, .ui-link, .form-control, .btn, .ui-sortable-column,.ui-link, .ui-tabs-nav > li,.ui-selectonemenu-trigger, .ui-accordion-header, .treeview, .sidebar-toggle, .ui-radiobutton-icon, td[role="gridcell"], .ui-selectcheckboxmenu-trigger,.ui-paginator-page, .ui-panelmenu-header > a, a#layout-setup, .control-sidebar div#restore-defaults > a, .control-sidebar div.ui-selectbooleancheckbox .ui-chkbox, .control-sidebar span.control-sidebar-subheading > label, .control-sidebar a.skin-link, button.navbar-toggle, li.dropdown > a';
+
+                    $(function () {
+                        $(document.body).off('mousedown.ripple', rippleElements)
+                            .on('mousedown.ripple', rippleElements, null, function (e) {
+                                var element = $(this);
+                                $(".ripple").remove();
+                                var posX = element.offset().left,
+                                    posY = element.offset().top,
+                                    width = element.outerWidth(),
+                                    height = element.outerHeight();
+
+                                element.prepend("<span class='ripple'></span>");
+
+
+                                if (width >= height) {
+                                    height = width;
+                                } else {
+                                    width = height;
+                                }
+                                var x = e.pageX - posX - width / 2;
+                                var y = e.pageY - posY - height / 2;
+
+                                $(".ripple").css({
+                                    width: width,
+                                    height: height,
+                                    top: y + 'px',
+                                    left: x + 'px'
+                                }).addClass("rippleEffect");
+                            });
+                    });
+                }
+                /* ]]>*/
+            </script>
+        <script type="text/javascript">
+            $(window).scroll(function () {
+                if (isMobile()) {
+                    var minScrollTimeNav = 700;
+                    var now = new Date().getTime();
+                    if (scrollTimerNav) {
+                        if ((now - lastScrollFireTimeNav) > (5 * minScrollTimeNav)) {
+                            activateAutoShowNavbarOnScrollUp();   // fire immediately on first scroll
+                            lastScrollFireTimeNav = now;
+                        }
+                    } else {
+                        scrollTimerNav = setTimeout(function () {
+                            scrollTimerNav = null;
+                            lastScrollFireTimeNav = new Date().getTime();
+                            activateAutoShowNavbarOnScrollUp();
+                        }, minScrollTimeNav);
+                    }
+                }
+            });
+        </script>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            /* hide info messages */
+            $(document).on("pfAjaxComplete", function () {
+                var $messages = $("div[id$='info-messages']");
+
+                if ($messages.length) {
+                    var wordCount = $messages.text().split(/\W/).length;
+                    var readingTimeMillis = 2500 + (wordCount * 200);
+
+                    setTimeout(function () {
+                        $messages.slideUp();
+                    }, readingTimeMillis);
+                }
+
+            });
+
+            $(document).ready(function () {
+                var $messages = $("div[id$='info-messages']");
+
+                if ($messages.length) {
+                    var wordCount = $messages.text().split(/\W/).length;
+                    var readingTimeMillis = 2500 + (wordCount * 200);
+
+                    setTimeout(function () {
+                        $messages.slideUp();
+                    }, readingTimeMillis);
+                }
+
+            });
+            //]]>
+        </script>
+        <div id="enableMobileHeader"></div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                activateRippleIcons();
+            });
+
+            $(document).on("pfAjaxComplete", function () {
+                activateRippleIcons();
+            });
+        </script>
+        <style type="text/css">
+            #adminStatusDialog .ui-dialog-titlebar {
+                padding: 0;
+                border: 0;
+            }
+        </style>
+
+<div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div><div class="ui-dialog-docking-zone"></div><div id="j_idt18:j_idt19_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay"><div class="ui-selectonemenu-items-wrapper" style="max-height:200px"><ul id="j_idt18:j_idt19_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox" aria-activedescendant="j_idt18:j_idt19_2"><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Safra 2019/2020" tabindex="-1" role="option" aria-selected="false" id="j_idt18:j_idt19_0">Safra 2019/2020</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Safra 2020/2021" tabindex="-1" role="option" aria-selected="false" id="j_idt18:j_idt19_1">Safra 2020/2021</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight" data-label="Safra 2021/2022" tabindex="-1" role="option" aria-selected="true" id="j_idt18:j_idt19_2">Safra 2021/2022</li></ul></div></div><div class="ui-tooltip ui-tooltip-global ui-widget ui-tooltip-right" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all"></div></div><div id="j_idt128:mainTable:1:j_idt149" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Alterar</div></div><div id="j_idt128:mainTable:1:j_idt151" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Excluir</div></div><div id="j_idt128:mainTable:1:j_idt152" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" role="dialog" aria-describedby="j_idt128:mainTable:1:j_idt152_content" aria-hidden="true" aria-modal="true" aria-labelledby="j_idt128:mainTable:1:j_idt152_title" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt128:mainTable:1:j_idt152_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" id="j_idt128:mainTable:1:j_idt152_content" style="height: auto;"><span class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div><div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="j_idt128:mainTable:1:j_idt153" name="j_idt128:mainTable:1:j_idt153" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes btn-danger" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:1:j_idt153&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-trash"></span><span class="ui-button-text ui-c">Excluir</span></button><button id="j_idt128:mainTable:1:j_idt154" name="j_idt128:mainTable:1:j_idt154" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-no btn-primary" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:1:j_idt154&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-ban"></span><span class="ui-button-text ui-c">Cancelar</span></button></div></div><div id="j_idt128:mainTable:2:j_idt149" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Alterar</div></div><div id="j_idt128:mainTable:2:j_idt151" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Excluir</div></div><div id="j_idt128:mainTable:2:j_idt152" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" role="dialog" aria-describedby="j_idt128:mainTable:2:j_idt152_content" aria-hidden="true" aria-modal="true" aria-labelledby="j_idt128:mainTable:2:j_idt152_title" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt128:mainTable:2:j_idt152_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" id="j_idt128:mainTable:2:j_idt152_content" style="height: auto;"><span class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div><div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="j_idt128:mainTable:2:j_idt153" name="j_idt128:mainTable:2:j_idt153" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes btn-danger" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:2:j_idt153&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-trash"></span><span class="ui-button-text ui-c">Excluir</span></button><button id="j_idt128:mainTable:2:j_idt154" name="j_idt128:mainTable:2:j_idt154" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-no btn-primary" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:2:j_idt154&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-ban"></span><span class="ui-button-text ui-c">Cancelar</span></button></div></div><div id="j_idt128:mainTable:3:j_idt149" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Alterar</div></div><div id="j_idt128:mainTable:3:j_idt151" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Excluir</div></div><div id="j_idt128:mainTable:3:j_idt152" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" role="dialog" aria-describedby="j_idt128:mainTable:3:j_idt152_content" aria-hidden="true" aria-modal="true" aria-labelledby="j_idt128:mainTable:3:j_idt152_title" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt128:mainTable:3:j_idt152_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" id="j_idt128:mainTable:3:j_idt152_content" style="height: auto;"><span class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div><div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="j_idt128:mainTable:3:j_idt153" name="j_idt128:mainTable:3:j_idt153" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes btn-danger" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:3:j_idt153&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-trash"></span><span class="ui-button-text ui-c">Excluir</span></button><button id="j_idt128:mainTable:3:j_idt154" name="j_idt128:mainTable:3:j_idt154" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-no btn-primary" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:3:j_idt154&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-ban"></span><span class="ui-button-text ui-c">Cancelar</span></button></div></div><div id="j_idt128:mainTable:4:j_idt149" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Alterar</div></div><div id="j_idt128:mainTable:4:j_idt151" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Excluir</div></div><div id="j_idt128:mainTable:4:j_idt152" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" role="dialog" aria-describedby="j_idt128:mainTable:4:j_idt152_content" aria-hidden="true" aria-modal="true" aria-labelledby="j_idt128:mainTable:4:j_idt152_title" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt128:mainTable:4:j_idt152_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" id="j_idt128:mainTable:4:j_idt152_content" style="height: auto;"><span class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div><div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="j_idt128:mainTable:4:j_idt153" name="j_idt128:mainTable:4:j_idt153" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes btn-danger" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:4:j_idt153&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-trash"></span><span class="ui-button-text ui-c">Excluir</span></button><button id="j_idt128:mainTable:4:j_idt154" name="j_idt128:mainTable:4:j_idt154" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-no btn-primary" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:4:j_idt154&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-ban"></span><span class="ui-button-text ui-c">Cancelar</span></button></div></div><div id="j_idt128:mainTable:0:j_idt149" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Alterar</div></div><div id="j_idt128:mainTable:0:j_idt151" class="ui-tooltip ui-widget ui-tooltip-top" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all">Excluir</div></div><div id="j_idt128:mainTable:0:j_idt152" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" role="dialog" aria-describedby="j_idt128:mainTable:0:j_idt152_content" aria-hidden="true" aria-modal="true" aria-labelledby="j_idt128:mainTable:0:j_idt152_title" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt128:mainTable:0:j_idt152_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" id="j_idt128:mainTable:0:j_idt152_content" style="height: auto;"><span class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div><div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="j_idt128:mainTable:0:j_idt153" name="j_idt128:mainTable:0:j_idt153" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes btn-danger" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:0:j_idt153&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-trash"></span><span class="ui-button-text ui-c">Excluir</span></button><button id="j_idt128:mainTable:0:j_idt154" name="j_idt128:mainTable:0:j_idt154" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-no btn-primary" onclick="PrimeFaces.ab({s:&quot;j_idt128:mainTable:0:j_idt154&quot;,f:&quot;j_idt128&quot;});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-ban"></span><span class="ui-button-text ui-c">Cancelar</span></button></div></div></body></html>
