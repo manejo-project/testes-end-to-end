@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-27T15:27:08 BRT" name="Default suite" finished-at="2022-01-27T15:27:15 BRT" duration-ms="6514">
+    <groups>
+    </groups>
+    <test started-at="2022-01-27T15:27:08 BRT" name="Default test" finished-at="2022-01-27T15:27:15 BRT" duration-ms="6514">
+      <class name="SelenideSessions.SelenideSessions.AppTest">
+        <test-method is-config="true" signature="openNav()[pri:0, instance:SelenideSessions.SelenideSessions.AppTest@a3d8174]" started-at="2022-01-27T15:27:08 BRT" name="openNav" finished-at="2022-01-27T15:27:11 BRT" duration-ms="2543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openNav -->
+        <test-method signature="testLogin()[pri:0, instance:SelenideSessions.SelenideSessions.AppTest@a3d8174]" started-at="2022-01-27T15:27:11 BRT" name="testLogin" finished-at="2022-01-27T15:27:15 BRT" duration-ms="3951" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+      </class> <!-- SelenideSessions.SelenideSessions.AppTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
