@@ -1,0 +1,438 @@
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: auto; min-height: 100%;"><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/javax.faces.resource/theme.css.xhtml?ln=primefaces-admin"><link type="text/css" rel="stylesheet" href="/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=8.0"><script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=8.0"></script><link type="text/css" rel="stylesheet" href="/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=8.0"><script type="text/javascript" src="/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/touch/touchswipe.js.xhtml?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/inputnumber/inputnumber.js.xhtml?ln=primefaces&amp;v=8.0"></script><link type="text/css" rel="stylesheet" href="/javax.faces.resource/inputnumber/inputnumber.css.xhtml?ln=primefaces&amp;v=8.0"><script type="text/javascript" src="/javax.faces.resource/bootstrap.min.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/admin-lte.min.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/admintemplate.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/slimscroll.min.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/slideout.min.js.xhtml?ln=js"></script><script type="text/javascript" src="/javax.faces.resource/adminslide.js.xhtml?ln=js"></script><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='pt_BR';}</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+        <title>manejo.app - Eficiência no MIP e MID</title></head><body class="skin-blue sidebar-mini" style="height: auto; min-height: 100%;"><div id="j_idt6"></div><div id="adminStatusDialog" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" role="dialog" aria-describedby="adminStatusDialog_content" aria-hidden="true" aria-modal="true" aria-labelledby="adminStatusDialog_title" style="width: auto; height: auto; visibility: visible; left: 548.2px; top: 306.95px; z-index: 1009; display: none;" aria-live="off"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="adminStatusDialog_title" class="ui-dialog-title"></span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="adminStatusDialog_content" style="height: auto;"><img id="j_idt7" src="/javax.faces.resource/ajaxloadingbar.gif.xhtml?ln=images" alt=""></div></div>
+<form id="j_idt8" name="j_idt8" method="post" action="/survey/survey/create.xhtml" enctype="application/x-www-form-urlencoded" style="display:none;">
+<input type="hidden" name="j_idt8" value="j_idt8">
+<input id="btn-restore-layout" type="submit" name="btn-restore-layout" value="" style="visibility:hidden;" onclick="restoreLayoutDefaults();"><button id="updateSkinBlue" name="updateSkinBlue" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinBlue&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinBlue&quot;,u:&quot;updateSkinBlue&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-blue');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinBlack" name="updateSkinBlack" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinBlack&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinBlack&quot;,u:&quot;updateSkinBlack&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-black');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinPurple" name="updateSkinPurple" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinPurple&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinPurple&quot;,u:&quot;updateSkinPurple&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-purple');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinGreen" name="updateSkinGreen" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinGreen&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinGreen&quot;,u:&quot;updateSkinGreen&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-green');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinRed" name="updateSkinRed" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinRed&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinRed&quot;,u:&quot;updateSkinRed&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-red');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinYellow" name="updateSkinYellow" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinYellow&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinYellow&quot;,u:&quot;updateSkinYellow&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-yellow');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinTeal" name="updateSkinTeal" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinTeal&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinTeal&quot;,u:&quot;updateSkinTeal&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-teal');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinBlueLight" name="updateSkinBlueLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinBlueLight&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinBlueLight&quot;,u:&quot;updateSkinBlueLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-blue-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinBlackLight" name="updateSkinBlackLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinBlackLight&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinBlackLight&quot;,u:&quot;updateSkinBlackLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-black-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinPurpleLight" name="updateSkinPurpleLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinPurpleLight&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinPurpleLight&quot;,u:&quot;updateSkinPurpleLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-purple-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinRedLight" name="updateSkinRedLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinRedLight&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinRedLight&quot;,u:&quot;updateSkinRedLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-red-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinGreenLight" name="updateSkinGreenLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinGreenLight&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinGreenLight&quot;,u:&quot;updateSkinGreenLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-green-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinYellowLight" name="updateSkinYellowLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinYellowLight&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinYellowLight&quot;,u:&quot;updateSkinYellowLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-yellow-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><button id="updateSkinTealLight" name="updateSkinTealLight" class="" onclick="PrimeFaces.ab({s:&quot;updateSkinTealLight&quot;,f:&quot;j_idt8&quot;,p:&quot;updateSkinTealLight&quot;,u:&quot;updateSkinTealLight&quot;,g:false,ps:true,onco:function(xhr,status,args,data){replaceSkinWith('skin-teal-light');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">ui-button</span></button><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="8150948113169387447:1474528247530108388" autocomplete="off">
+</form>
+
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+        <div id="loader" class="load-bar" style="display: none">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <header class="main-header">
+        <a href="/" class="logo">
+            <span class="logo-mini"><img id="j_idt11" src="/javax.faces.resource/images/manejo-logo.png.xhtml?pfdrid_c=true" alt="" width="32px" height="42px">
+            </span>
+            <span class="logo-lg">
+        manejo.app
+    
+            </span>
+            <span class="logo-lg">
+            </span>
+        </a>
+        <nav class="navbar navbar-static-top">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only"></span>
+            </a>
+            <div class="navbar-custom-menu">
+
+    <ul class="nav navbar-nav">
+
+        <li style="margin-top: 12px">
+<form id="j_idt17" name="j_idt17" method="post" action="/survey/survey/create.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt17" value="j_idt17">
+<div id="j_idt17:j_idt18" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" aria-owns="j_idt17:j_idt18_items" style="color: white; min-width: 117.2px;" role="combobox" aria-haspopup="listbox" aria-expanded="false"><div class="ui-helper-hidden-accessible"><input id="j_idt17:j_idt18_focus" name="j_idt17:j_idt18_focus" type="text" autocomplete="off" aria-required="true" aria-autocomplete="list" aria-activedescendant="j_idt17:j_idt18_2" aria-describedby="j_idt17:j_idt18_2" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt17:j_idt18_input" name="j_idt17:j_idt18_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt17:j_idt18&quot;,e:&quot;change&quot;,f:&quot;j_idt17&quot;,p:&quot;j_idt17:j_idt18&quot;,onsu:function(data,status,xhr){window.location.reload();;}});"><option value="1" data-escape="true">Safra 2019/2020</option><option value="2" data-escape="true">Safra 2020/2021</option><option value="3" selected="selected" data-escape="true">Safra 2021/2022</option></select></div><label id="j_idt17:j_idt18_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">Safra 2021/2022</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="8150948113169387447:1474528247530108388" autocomplete="off">
+</form>
+        </li>
+
+        <li class="dropdown user user-menu"><a href="/j_spring_security_logout" class="ui-link ui-widget" title="Logoff">
+                <i class="fa fa-user-circle fa-2x"></i>
+                Anna Doe
+                <i class="fa fa-sign-out fa-2x"></i></a>
+        </li>
+    </ul>
+            </div>
+
+            <div class="center-navbar">
+            </div>
+            <div class="mobile-header">
+                <h4></h4>
+            </div>
+        </nav>
+        </header>
+        <!-- side menu -->
+        <aside id="sidebar" class="main-sidebar slideout-menu" style="display: block;">
+            <div>
+                    <div class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Buscar itens de menu..." autocomplete="off" onclick="this.value = '';searchLeftMenu('')" onkeyup="searchLeftMenu(this.value)" onblur="this.value = '';hideMenuResults()">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                                </button>
+                            </span>
+
+                        </div>
+
+                        <ul id="menu-search" class="nav navbar-nav" role="menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"></a>
+
+                                <ul class="dropdown-menu" role="menu">
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                <section class="sidebar" style="height: auto;">
+        <ul class="sidebar-menu tree" data-widget="tree">
+            <li><a href="/index.xhtml" class="ui-link ui-widget" onclick="clearBreadCrumbs()">
+                    <i class="fa fw fa-pie-chart"></i>
+                    <span>Painel de Controle</span></a>
+            </li>
+                <li class="header">
+                    Opções
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-group"></i>
+                        <span>Unidade de Referência</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/base/field/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Unidades de Referência">
+                                <i class="fa fw fa-group"></i>
+                                <span>Gerenciamento das URs</span></a>
+                        </li>
+
+                        <li><a href="/base/supervisor/index.xhtml" class="ui-link ui-widget" title="Gerenciamento dos Instrutores">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Instrutor</span></a>
+                        </li>                        
+
+                        <li><a href="/base/farmer/index.xhtml" class="ui-link ui-widget" title="Gerenciamento dos Produtores">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Produtor</span></a>
+                        </li>
+
+                        <li><a href="/base/region/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Regiões">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Região</span></a>
+                        </li>
+
+                        <li><a href="/base/macro-region/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Macrorregiões">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Macrorregião</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="treeview active menu-open">
+                    <a href="#">
+                        <i class="fa fw fa-book"></i>
+                        <span>Safra</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="/survey/survey/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das URs na Safra">
+                                <i class="fa fw fa-book"></i>
+                                <span>Gerenciamento da Safra</span></a>
+                        </li>
+
+                        <li><a href="/survey/harvest/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Safras">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Safra</span></a>
+                        </li>                        
+
+                        <li><a href="/survey/cultivar/index.xhtml" class="ui-link ui-widget" title="Gerenciamento das Cultivares">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Cultivar</span></a>
+                        </li>
+
+                    </ul>
+                </li>            
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-bug"></i>
+                        <span>MIP</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+
+                    <ul class="treeview-menu"> 
+                        <li><a href="/mip/pest/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Pragas">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Pragas</span></a>
+                        </li>
+
+                        <li><a href="/mip/pest-disease/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Doenças das Pragas">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Doenças das Pragas</span></a>
+                        </li>
+
+                        <li><a href="/mip/pest-natural-predator/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Inimigos Naturais de Pragas">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Inimigos Naturais</span></a>
+                        </li>
+                    </ul>
+                </li>            
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-leaf"></i>
+                        <span>MID</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/mid/blade-reading-entity/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Entidades">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Entidades</span></a>
+                        </li>  
+
+
+                        <li><a href="/mid/blade-reading-person/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Profissionais para Leitura">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Profissionais</span></a>
+                        </li>  
+
+                    </ul>
+                </li>            
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-yelp"></i>
+                        <span>Pulverização</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/pulverisation/target/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Alvo Principal ou Função">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Alvos/Funções</span></a>
+                        </li>
+
+                        <li><a href="/pulverisation/product/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Produtos">
+                                <i class="fa fa-circle-o"></i>
+                                <span>Produtos</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fw fa-user-secret"></i>
+                        <span>Usuários</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/security/mip-user/index.xhtml" class="ui-link ui-widget" title="Gerenciamento de Usuários do Sistema">
+                                <i class="fa fw fa-user-secret"></i>
+                                <span>Gerenciamento de Usuários</span></a>
+                        </li>  
+                    </ul>
+                </li>
+
+            <li><a href="/experimental/index.xhtml" class="ui-link ui-widget" title="Permite o envio de fotos de pragas, doenças e inimigos naturais">
+                    <i class="fa fw fa-arrow-up"></i>
+                    <span>Envio de Fotos</span></a>
+            </li>
+
+        </ul>
+                </section>
+            </div>
+        </aside>
+        <!-- content --><div id="content" class="content-wrapper" style="transform: initial; min-height: 568.4px;">
+            <section class="content-header">
+                <h1>
+        Adicionar UR à Safra
+    
+                    <small>
+        Permite a coleta de amostras para uma UR
+    </small>
+                </h1>
+                    <ol class="breadcrumb" style="overflow: hidden;">
+                        <li style="position: relative;">
+<form id="j_idt109" name="j_idt109" method="post" action="/survey/survey/create.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt109" value="j_idt109">
+<a id="link-home" href="#" class="ui-commandlink ui-widget ripplelink" onclick="PrimeFaces.ab({s:&quot;link-home&quot;,f:&quot;j_idt109&quot;,p:&quot;link-home&quot;,u:&quot;@none&quot;});return false;">
+                                    <i class="fa fa-home"></i>Inicio</a><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="8150948113169387447:1474528247530108388" autocomplete="off">
+</form>
+                        </li>
+                            <li class="active">
+                                    Gerenciamento de URs Participantes da Safra
+                                
+                            </li>
+                    </ol>
+            </section>
+            <section class="content">
+                    <div class="row">
+                        <div class="col-sm-12"><div id="messages" class="ui-messages ui-widget" aria-live="polite"></div>
+                                <!-- we need two messages because info-messages are automatically hidden via javascript  --><div id="info-messages" class="ui-messages ui-widget" aria-live="polite" style="display: none;"></div> <!-- exception messages with type tooltip -->
+                        </div>
+                    </div>
+<form id="form" name="form" method="post" action="/survey/survey/create.xhtml" enctype="application/x-www-form-urlencoded" data-an-count="5" data-an-form-handler="yfdud">
+<input type="hidden" name="form" value="form">
+<span id="j_idt127"></span><script type="text/javascript">$(function(){PrimeFaces.focus(null, 'form');});</script><div id="j_idt128" class="ui-panel ui-widget ui-widget-content ui-corner-all box-primary card" data-widget="widget_j_idt128"><div id="j_idt128_content" class="ui-panel-content ui-widget-content">
+                <div id="main-buttons" class="hidden-sm hidden-xs"><button id="saveButton" name="saveButton" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-state-disabled btn-primary" onclick="" type="submit" disabled="disabled" role="button" aria-disabled="true"><span class="ui-button-icon-left ui-icon ui-c fa fa-check"></span><span class="ui-button-text ui-c">Adicionar à Safra</span></button><img id="j_idt130" width="5" alt="" src="/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&amp;v=8.0"><button id="j_idt131" name="j_idt131" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c fa fa-reply"></span><span class="ui-button-text ui-c">Cancelar</span></button>
+                </div><div id="saveButtonMini" class="ui-splitbutton ui-buttonset ui-widget hidden-md hidden-lg btn-primary" aria-haspopup="true" aria-controls="saveButtonMini_menu" aria-expanded="false"><button id="saveButtonMini_button" name="saveButtonMini_button" class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left ui-state-disabled" type="submit" disabled="disabled"><span class="ui-button-icon-left ui-icon ui-c fa fa-check"></span><span class="ui-button-text ui-c">Adicionar à Safra</span></button><button id="saveButtonMini_menuButton" name="saveButtonMini_menuButton" type="button" class="ui-splitbutton-menubutton  ui-button ui-widget ui-state-default ui-corner-right ui-button-icon-only ui-state-disabled" disabled="disabled"><span class="ui-button-icon-left ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text ui-c">ui-button</span></button><div id="saveButtonMini_menu" class="ui-menu ui-splitbuttonmenu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow" role="menu" aria-labelledby="saveButtonMini" tabindex="-1"><div class="ui-splitbuttonmenu-list-wrapper"><ul class="ui-menu-list ui-helper-reset"><li class="ui-separator ui-state-default"></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a id="j_idt134" tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.addSubmitParam('form',{'j_idt134':'j_idt134'}).submit('form');return false;"><span class="ui-menuitem-icon ui-icon fa fa-reply" aria-hidden="true"></span><span class="ui-menuitem-text">Voltar</span></a></li></ul></div></div></div>
+
+                <hr><div id="j_idt136" class="ui-wizard ui-widget"><ul class="ui-wizard-step-titles ui-helper-reset ui-helper-clearfix"><li class="ui-wizard-step-title ui-state-default ui-corner-all">Safra</li><li class="ui-wizard-step-title ui-state-default ui-corner-all">Selecionar UR</li><li class="ui-wizard-step-title ui-state-default ui-corner-all">Cultivar</li><li class="ui-wizard-step-title ui-state-default ui-corner-all">Área</li><li class="ui-wizard-step-title ui-state-default ui-corner-all">Manejos</li><li class="ui-wizard-step-title ui-state-default ui-corner-all ui-state-highlight">Datas</li><li class="ui-wizard-step-title ui-state-default ui-corner-all">Revisão</li></ul><div id="j_idt136_content" class="ui-wizard-content"><div id="j_idt190" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt190"><div id="j_idt190_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Passo 6/7: Datas</span></div><div id="j_idt190_content" class="ui-panel-content ui-widget-content"><div id="j_idt191" class="ui-panelgrid ui-widget ui-panelgrid-blank ui-fluid"><div id="j_idt191_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive"><div class="ui-g"><div class="ui-panelgrid-cell ui-lg-4 ui-g-4 ui-md-12 ui-sm-12"><table id="j_idt192" class="ui-panelgrid ui-widget" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"><label id="j_idt193" class="ui-outputlabel ui-widget" for="j_idt194_input">Data da Semeadura<span class="ui-outputlabel-rfi">*</span></label></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"><span id="j_idt194" class="ui-calendar"><div id="j_idt194_inline" class="hasDatepicker"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block; top: 131.05px;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month" aria-label="select month">May</span>&nbsp;<span class="ui-datepicker-year" aria-label="select year">2022</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th scope="col"><span title="Monday">Mo</span></th><th scope="col"><span title="Tuesday">Tu</span></th><th scope="col"><span title="Wednesday">We</span></th><th scope="col"><span title="Thursday">Th</span></th><th scope="col"><span title="Friday">Fr</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">6</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">7</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">13</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">14</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">17</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">20</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">21</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">27</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">28</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div></div><input id="j_idt194_input" name="j_idt194_input" type="hidden" aria-required="true" aria-labelledby="j_idt193"></span></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"><div id="j_idt195" role="alert" aria-atomic="true" aria-live="polite" class="ui-message"></div></td></tr></tbody></table></div><div class="ui-panelgrid-cell ui-g-12 ui-md-4"><table id="j_idt196" class="ui-panelgrid ui-widget" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"><label id="j_idt197" class="ui-outputlabel ui-widget" for="j_idt198_input">Data da Emergência<span class="ui-outputlabel-rfi">*</span></label></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"><span id="j_idt198" class="ui-calendar"><div id="j_idt198_inline" class="hasDatepicker"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block; top: 131.05px;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month" aria-label="select month">May</span>&nbsp;<span class="ui-datepicker-year" aria-label="select year">2022</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th scope="col"><span title="Monday">Mo</span></th><th scope="col"><span title="Tuesday">Tu</span></th><th scope="col"><span title="Wednesday">We</span></th><th scope="col"><span title="Thursday">Th</span></th><th scope="col"><span title="Friday">Fr</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">6</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">7</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">13</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">14</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">17</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">20</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">21</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">27</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">28</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2022"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div></div><input id="j_idt198_input" name="j_idt198_input" type="hidden" aria-required="true" aria-labelledby="j_idt197"></span></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"><div id="j_idt199" role="alert" aria-atomic="true" aria-live="polite" class="ui-message"></div></td></tr></tbody></table></div></div></div></div></div></div></div><div class="ui-wizard-navbar ui-helper-clearfix"><button id="j_idt136_back" name="j_idt136_back" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-wizard-nav-back" role="button" aria-disabled="false" style=""><span class="ui-button-icon-left ui-icon ui-c ui-icon-arrowthick-1-w"></span><span class="ui-button-text ui-c">Anterior</span></button><button id="j_idt136_next" name="j_idt136_next" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-wizard-nav-next ui-state-focus" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-arrowthick-1-e"></span><span class="ui-button-text ui-c">Próximo</span></button></div></div></div></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:3" value="8150948113169387447:1474528247530108388" autocomplete="off">
+</form>
+            </section></div>
+
+        <footer class="main-footer">
+        <div class="row hidden-xs hidden-sm">
+            <div class="col-md-6">
+                <span>
+                    manejo.app - Copyright (C) 2018-2020. Logo by Patrickss / Freepik
+                </span>
+            </div>
+            <div class="col-md-4 hidden-md">
+                <div>
+                    <a href="http://www.utfpr.edu.br" target="_blank" style="margin-right: 10px"><img id="j_idt256" src="/javax.faces.resource/images/utfpr-logo.png.xhtml?pfdrid_c=true" alt="" width="60px" height="23px">
+                    </a>
+                    <a href="http://www.emater.pr.gov.br" target="_blank" style="margin-right: 10px"><img id="j_idt258" src="/javax.faces.resource/images/idr-logo.jpg.xhtml?pfdrid_c=true" alt="" width="85px" height="23px" style="margin-right: 10px">
+                    </a>
+                    <a href="http://www.sistemafaep.org.br" target="_blank" style="margin-right: 10px"><img id="j_idt260" src="/javax.faces.resource/images/senar-logo.png.xhtml?pfdrid_c=true" alt="" width="70px" height="23px">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="pull-right hidden-xs" style="color: gray">
+                    <i>DEV</i>
+                </div>
+            </div>
+        </div>
+        </footer>
+        <div id="scrollTop" class="ripplelink scroll-top" onclick="window.scrollTo(0, 0)">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        if (isMobile()) {
+            window.onscroll = activateScrollToTop;
+        }
+    </script>
+            <script type="text/javascript">
+                /*<![CDATA[*/
+
+                if (false) {
+                    ripple();
+                } else if (isMobile()) {
+                    ripple();
+                }
+
+                function ripple() {
+                    var rippleElements = '.ripplelink,button.ui-button:not([class*=ui-picklist]):not([class*=ui-orderlist]),li.ui-selectlistbox-item,li.ui-multiselectlistbox-item,.ui-selectonemenu-label,.ui-selectcheckboxmenu,.ui-autocomplete-dropdown, .ui-autocomplete-item, .ui-splitbutton-menubutton, .ui-splitbutton button.ui-button,.input-group, .ui-selectbooleanbutton, div.ui-button,.ui-chkbox-icon, .ui-link, .form-control, .btn, .ui-sortable-column,.ui-link, .ui-tabs-nav > li,.ui-selectonemenu-trigger, .ui-accordion-header, .treeview, .sidebar-toggle, .ui-radiobutton-icon, td[role="gridcell"], .ui-selectcheckboxmenu-trigger,.ui-paginator-page, .ui-panelmenu-header > a, a#layout-setup, .control-sidebar div#restore-defaults > a, .control-sidebar div.ui-selectbooleancheckbox .ui-chkbox, .control-sidebar span.control-sidebar-subheading > label, .control-sidebar a.skin-link, button.navbar-toggle, li.dropdown > a';
+
+                    $(function () {
+                        $(document.body).off('mousedown.ripple', rippleElements)
+                            .on('mousedown.ripple', rippleElements, null, function (e) {
+                                var element = $(this);
+                                $(".ripple").remove();
+                                var posX = element.offset().left,
+                                    posY = element.offset().top,
+                                    width = element.outerWidth(),
+                                    height = element.outerHeight();
+
+                                element.prepend("<span class='ripple'></span>");
+
+
+                                if (width >= height) {
+                                    height = width;
+                                } else {
+                                    width = height;
+                                }
+                                var x = e.pageX - posX - width / 2;
+                                var y = e.pageY - posY - height / 2;
+
+                                $(".ripple").css({
+                                    width: width,
+                                    height: height,
+                                    top: y + 'px',
+                                    left: x + 'px'
+                                }).addClass("rippleEffect");
+                            });
+                    });
+                }
+                /* ]]>*/
+            </script>
+        <script type="text/javascript">
+            $(window).scroll(function () {
+                if (isMobile()) {
+                    var minScrollTimeNav = 700;
+                    var now = new Date().getTime();
+                    if (scrollTimerNav) {
+                        if ((now - lastScrollFireTimeNav) > (5 * minScrollTimeNav)) {
+                            activateAutoShowNavbarOnScrollUp();   // fire immediately on first scroll
+                            lastScrollFireTimeNav = now;
+                        }
+                    } else {
+                        scrollTimerNav = setTimeout(function () {
+                            scrollTimerNav = null;
+                            lastScrollFireTimeNav = new Date().getTime();
+                            activateAutoShowNavbarOnScrollUp();
+                        }, minScrollTimeNav);
+                    }
+                }
+            });
+        </script>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            /* hide info messages */
+            $(document).on("pfAjaxComplete", function () {
+                var $messages = $("div[id$='info-messages']");
+
+                if ($messages.length) {
+                    var wordCount = $messages.text().split(/\W/).length;
+                    var readingTimeMillis = 2500 + (wordCount * 200);
+
+                    setTimeout(function () {
+                        $messages.slideUp();
+                    }, readingTimeMillis);
+                }
+
+            });
+
+            $(document).ready(function () {
+                var $messages = $("div[id$='info-messages']");
+
+                if ($messages.length) {
+                    var wordCount = $messages.text().split(/\W/).length;
+                    var readingTimeMillis = 2500 + (wordCount * 200);
+
+                    setTimeout(function () {
+                        $messages.slideUp();
+                    }, readingTimeMillis);
+                }
+
+            });
+            //]]>
+        </script>
+        <div id="enableMobileHeader"></div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                activateRippleIcons();
+            });
+
+            $(document).on("pfAjaxComplete", function () {
+                activateRippleIcons();
+            });
+        </script>
+        <style type="text/css">
+            #adminStatusDialog .ui-dialog-titlebar {
+                padding: 0;
+                border: 0;
+            }
+        </style>
+
+<div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div><div class="ui-dialog-docking-zone"></div><div id="j_idt17:j_idt18_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay"><div class="ui-selectonemenu-items-wrapper" style="max-height:200px"><ul id="j_idt17:j_idt18_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox" aria-activedescendant="j_idt17:j_idt18_2"><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Safra 2019/2020" tabindex="-1" role="option" aria-selected="false" id="j_idt17:j_idt18_0">Safra 2019/2020</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Safra 2020/2021" tabindex="-1" role="option" aria-selected="false" id="j_idt17:j_idt18_1">Safra 2020/2021</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight" data-label="Safra 2021/2022" tabindex="-1" role="option" aria-selected="true" id="j_idt17:j_idt18_2">Safra 2021/2022</li></ul></div></div><div class="ui-tooltip ui-tooltip-global ui-widget ui-tooltip-right" role="tooltip"><div class="ui-tooltip-arrow"></div><div class="ui-tooltip-text ui-shadow ui-corner-all"></div></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>
